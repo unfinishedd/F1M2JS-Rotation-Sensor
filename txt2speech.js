@@ -9,4 +9,3 @@ function sayItLoud (textString) {
         window.speechSynthesis.cancel();
     }
   }
-

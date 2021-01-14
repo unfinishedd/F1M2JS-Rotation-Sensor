@@ -36,24 +36,33 @@ function showDataColor(alpha, beta, gamma){
 function activateVoice(alpha, beta, gamma){
     // voice if Z-axis rotation > value
     if(alpha > 120){
-        let myTxt = "Draai me rond voor een goedkope virus";
+        let myTxt = "Nice rotation isn't it";  
         sayItLoud(myTxt); // text 2 speech
 
         // laat het ook in de HTML zien
         document.getElementById('voice').innerHTML = myTxt;
-        }
-    else{
-        // haal de tekst weg
-        document.getElementById('voice').innerHTML = "";
-        }
+    }
+    if (alpha < 20) {
+        let myTxt2 = "Niet slecht he";  
+        sayItLoud(myTxt2); // text 2 speech
+
+        // laat het ook in de HTML zien
+        document.getElementById('voice').innerHTML = myTxt2;
+    } else {
+       // haal de tekst weg
+       document.getElementById('voice').innerHTML = ""; 
+    }
 }
 
 function showMyImage(alpha, beta, gamma){
     // image if X-axis > value
     if(beta > 40){
-        document.getElementById('myImage').src = "https://www.pinclipart.com/picdir/middle/93-934819_spongebob-clip-svg-logo-spongebob-squarepants-png-download.png"; // show image
-        }
-        else {
-            document.getElementById('myImage').src = ""; // no image
-        }
+        document.getElementById('myImage').src = "image1.jpg"; // show image
+    }
+    if ( beta < 10) {
+        document.getElementById('myImage').src = "image2.jpg";
+    } else {
+        document.getElementById('myImage').src = ""; // no image
+    }
+
 }
